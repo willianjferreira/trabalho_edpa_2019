@@ -41,18 +41,6 @@ int filhoDireita(int i) {
   return 2*i + 1;
 }
 
-// Insere no final do arranjo do heap
-bool inserir(HEAP * h, int valor) {
-  compInsere++;
-  if (h->tamanhoAtual < h->tamanhoMaximo) {
-    (h->tamanhoAtual)++;
-    h->A[h->tamanhoAtual] = valor;
-    return true;
-  }
-
-  return false;
-}
-
 bool inserirHeap(HEAP * h, int chave) {
   int i, temp;
   compInsere++;
@@ -61,10 +49,11 @@ bool inserirHeap(HEAP * h, int chave) {
   i = h->tamanhoAtual;
   h->A[i] = chave;
   while ((i>1) && (h->A[pai(i)]<h->A[i])) {
-     temp = h->A[i];
-     h->A[i] = h->A[pai(i)];
-     h->A[pai(i)] = temp;       
-     i = pai(i);
+    compInsere++;
+    temp = h->A[i];
+    h->A[i] = h->A[pai(i)];
+    h->A[pai(i)] = temp;       
+    i = pai(i);
   }
 
   return true;
@@ -121,6 +110,7 @@ int main() {
     // gerando o vetor de números aleatorios de tamanho size que será usado na comparação dos dois métodos de criação de heap
     for (int i = 0; i < size; i++) {
       vetor[i] = rand() % 10000000;
+      //vetor[i] = size-i;
     }
 	  
     //printf("--------------\n");
@@ -129,7 +119,7 @@ int main() {
     */ 
     clock_t tInicio, tFim;
     tInicio = clock();
-    for(int i=0;i<size;i++) inserir(&meuHeap_i, vetor[i]);
+    for(int i=0;i<size;i++) inserirHeap(&meuHeap_i, vetor[i]);
     tFim = clock();
     double tDecorrido = ( (double) (tFim - tInicio) ) / CLOCKS_PER_SEC;
     //printf("[Inserção]Tempo :\t[%lf] para %d elementos\n",tDecorrido,size);
