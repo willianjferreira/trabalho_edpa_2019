@@ -69,9 +69,7 @@ void rebaixa(HEAP * h, int n, int i) {
   int menor = pai;
   int aux = 0;
 
-  compRebaixa++;
   if ((fesq <= n) && (h->A[fesq] < h->A[menor])) menor = fesq;
-  compRebaixa++;
   if ((fdir <= n) && (h->A[fdir] < h->A[menor])) menor = fdir;
 
   compRebaixa++;
@@ -109,8 +107,9 @@ int main() {
 
     // gerando o vetor de números aleatorios de tamanho size que será usado na comparação dos dois métodos de criação de heap
     for (int i = 0; i < size; i++) {
-      vetor[i] = rand() % 10000000;
+      //vetor[i] = rand() % 10000000;
       //vetor[i] = size-i;
+      vetor[i] = i;
     }
 	  
     //printf("--------------\n");
