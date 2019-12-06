@@ -1,2 +1,12 @@
 Trabalho EDPA 2019/2 - Contribuicoes
 Titulo: Um estudo comparativo entre metodos de criacao de estruturas Heap
+
+As crontribuicoes para producao do trabalho se resumem conforme descrito abaixo:
+
+A producao do codigo em linguagem C foi realizada pelos alunos Rodolfo e Manoel.
+A revisao do codigo e sugestoes de melhorias foram feitas pelos alunos Wesley, Willian, Manoel e Rodolfo.
+A geracao dos graficos foi realizada pelo aluno Manoel.
+A documentacao do trabalho foi realizada pelos alunos Wesley, Willian, Manoel e Rodolfo.
+A revisao final do texto foi realizada de forma compartilhada por todos os alunos do grupo.
+
+Todos os alunos integrantes do grupo contribuiram de forma significativa para a conclusao do trabalho.
